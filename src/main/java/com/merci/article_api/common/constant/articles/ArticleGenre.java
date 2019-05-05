@@ -5,7 +5,7 @@ import com.merci.article_api.common.constant.EnumCodeInterface;
 /**
  * 記事ジャンルの定義
  */
-public enum ArticleGenre implements EnumCodeInterface {
+public enum ArticleGenre implements EnumCodeInterface<ArticleGenre> {
     /** art:美術 */
     ART("art", "美術"),
     /** coffee:コーヒー */

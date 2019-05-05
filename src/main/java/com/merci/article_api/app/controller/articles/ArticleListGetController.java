@@ -9,8 +9,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.merci.article_api.app.form.request.articles.ArticleListGetRequestForm;
 import com.merci.article_api.app.form.response.articles.ArticleListGetResponseForm;
+import com.merci.article_api.common.constant.EnumCodeInterface;
 import com.merci.article_api.common.constant.articles.ArticleGenre;
-import com.merci.article_api.common.util.EnumUtils;
 import com.merci.article_api.domain.bean.request.ArticleListGetRequestBean;
 import com.merci.article_api.domain.bean.result.ArticleListGetResultBean;
 import com.merci.article_api.domain.service.articles.ArticleListGetService;
@@ -45,7 +45,7 @@ public class ArticleListGetController {
      * @return 要求Bean
      */
     private ArticleListGetRequestBean convertToRequestBean(ArticleListGetRequestForm reqForm) {
-        ArticleGenre genre = EnumUtils.getEnumByCode(ArticleGenre.class, reqForm.getGenreCd());
+        ArticleGenre genre = EnumCodeInterface.getEnumByCode(ArticleGenre.class, reqForm.getGenreCd());
 
         ArticleListGetRequestBean reqBean = new ArticleListGetRequestBean();
         reqBean.setGenre(genre);
