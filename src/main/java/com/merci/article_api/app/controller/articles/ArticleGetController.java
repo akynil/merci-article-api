@@ -2,6 +2,7 @@ package com.merci.article_api.app.controller.articles;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -33,7 +34,7 @@ public class ArticleGetController {
      */
     @RequestMapping(value = "/{articleId}", method = RequestMethod.GET)
     public ArticleGetResponseForm getArticleList(@PathVariable("articleId") int articleId,
-            @ModelAttribute ArticleGetRequestForm reqForm) {
+            @Validated @ModelAttribute ArticleGetRequestForm reqForm) {
 
         ArticleGetRequestBean reqBean = convertToRequestBean(reqForm);
         reqBean.setArticleId(articleId);

@@ -2,6 +2,7 @@ package com.merci.article_api.app.controller.articles;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -33,7 +34,7 @@ public class ArticleListGetController {
      * @return レスポンスForm
      */
     @RequestMapping(method = RequestMethod.GET)
-    public ArticleListGetResponseForm getArticleList(@ModelAttribute ArticleListGetRequestForm reqForm) {
+    public ArticleListGetResponseForm getArticleList(@Validated @ModelAttribute ArticleListGetRequestForm reqForm) {
         ArticleListGetResultBean result = service.execute(convertToRequestBean(reqForm));
         return convertToResponseForm(result);
     }
