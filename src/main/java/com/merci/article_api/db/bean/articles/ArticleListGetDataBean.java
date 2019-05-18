@@ -13,6 +13,12 @@ public class ArticleListGetDataBean {
     /** 記事タイトル */
     private String articleTitle;
 
+    /** 記事URL */
+    private String articleUrl;
+
+    /** 記事説明 */
+    private String description;
+
     /** サイト名 */
     private String siteName;
 
@@ -56,6 +62,42 @@ public class ArticleListGetDataBean {
      */
     public void setArticleTitle(String articleTitle) {
         this.articleTitle = articleTitle;
+    }
+
+    /**
+     * 記事URLを取得する。
+     *
+     * @return 記事URL
+     */
+    public String getArticleUrl() {
+        return articleUrl;
+    }
+
+    /**
+     * 記事URLを設定する。
+     *
+     * @param articleUrl 記事URL
+     */
+    public void setArticleUrl(String articleUrl) {
+        this.articleUrl = articleUrl;
+    }
+
+    /**
+     * 記事説明を取得する。
+     *
+     * @return 記事説明
+     */
+    public String getDescription() {
+        return description;
+    }
+
+    /**
+     * 記事説明を設定する。
+     *
+     * @param description 記事説明
+     */
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     /**

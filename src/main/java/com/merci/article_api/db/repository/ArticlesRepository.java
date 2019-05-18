@@ -38,12 +38,12 @@ public class ArticlesRepository {
         StringBuilder sql = new StringBuilder();
         sql.append("SELECT");
         sql.append(" a.article_id");
-        sql.append(" , ag.article_id");
         sql.append(" , a.article_title");
+        sql.append(" , a.article_url");
         sql.append(" , a.site_name");
         sql.append(" , a.site_url");
+        sql.append(" , a.description");
         sql.append(" , a.published_date ");
-        sql.append(" , ag.genre_cd ");
 
         sql.append("FROM");
         sql.append(" articles a ");

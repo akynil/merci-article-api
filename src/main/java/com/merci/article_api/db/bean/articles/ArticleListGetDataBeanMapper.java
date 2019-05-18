@@ -18,6 +18,8 @@ public class ArticleListGetDataBeanMapper implements RowMapper<ArticleListGetDat
         ArticleListGetDataBean bean = new ArticleListGetDataBean();
         bean.setArticleId(rs.getInt("article_id"));
         bean.setArticleTitle(rs.getString("article_title"));
+        bean.setArticleUrl(rs.getString("article_url"));
+        bean.setDescription(rs.getString("description"));
         bean.setSiteName(rs.getString("site_name"));
         bean.setSiteUrl(rs.getString("site_url"));
         bean.setPublishedDate(rs.getTimestamp("published_date"));
